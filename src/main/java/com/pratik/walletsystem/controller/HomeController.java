@@ -10,4 +10,9 @@ public class HomeController {
     public String home() {
         return "🚀 Wallet System Backend is Running Successfully!";
     }
+
+    @GetMapping("/health")
+    public String health() {
+        return "Application is Healthy ✅";
+    }
 }
