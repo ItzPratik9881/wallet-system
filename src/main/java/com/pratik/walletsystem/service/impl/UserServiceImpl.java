@@ -11,9 +11,11 @@ import com.pratik.walletsystem.entity.User;
 import com.pratik.walletsystem.entity.Wallet;
 import com.pratik.walletsystem.enums.Role;
 import com.pratik.walletsystem.enums.WalletStatus;
+import com.pratik.walletsystem.exception.DuplicateEmailException;
 import com.pratik.walletsystem.repository.UserRepository;
 import com.pratik.walletsystem.repository.WalletRepository;
 import com.pratik.walletsystem.service.UserService;
+import com.pratik.walletsystem.exception.DuplicateEmailException;
 
 @Service
 public class UserServiceImpl implements UserService {
@@ -28,7 +30,8 @@ public class UserServiceImpl implements UserService {
     public String registerUser(UserRegistrationRequest request) {
 
         if (userRepository.existsByEmail(request.getEmail())) {
-            return "Email already exists!";
+             throw new DuplicateEmailException(
+            "Email already registered: " + request.getEmail());
         }
 
         User user = User.builder()
