@@ -1,0 +1,189 @@
+.dashboard-page {
+  padding: 36px 40px;
+}
+
+.dashboard-heading {
+  margin-bottom: 32px;
+}
+
+.dashboard-heading p {
+  margin: 0 0 6px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1.4px;
+}
+
+.dashboard-heading h1 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 32px;
+  font-weight: 700;
+}
+
+.dashboard-grid {
+  display: grid;
+  grid-template-columns: 2fr 1fr;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.balance-card,
+.account-card,
+.balance-search-card {
+  background: #ffffff;
+  border: 1px solid #e2e8f0;
+  border-radius: 14px;
+  box-shadow: 0 4px 16px rgba(15, 23, 42, 0.05);
+}
+
+.balance-card {
+  padding: 28px;
+}
+
+.balance-card-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.balance-card p,
+.account-card p {
+  margin: 0 0 10px;
+  color: #64748b;
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 1px;
+}
+
+.balance-card h2 {
+  margin: 0;
+  color: #0f172a;
+  font-size: 38px;
+  font-weight: 700;
+}
+
+.wallet-icon {
+  display: flex;
+  width: 56px;
+  height: 56px;
+  align-items: center;
+  justify-content: center;
+  border-radius: 14px;
+  background: #2563eb;
+  color: #ffffff;
+  font-size: 28px;
+  font-weight: 700;
+}
+
+.wallet-email {
+  margin-top: 22px !important;
+  color: #64748b !important;
+  font-size: 14px !important;
+  font-weight: 400 !important;
+  letter-spacing: normal !important;
+}
+
+.wallet-email strong {
+  color: #0f172a;
+}
+
+.account-card {
+  padding: 28px;
+}
+
+.account-card h3 {
+  margin: 0 0 8px;
+  color: #16a34a;
+  font-size: 24px;
+}
+
+.account-card span {
+  color: #64748b;
+  font-size: 14px;
+}
+
+.balance-search-card {
+  padding: 28px;
+}
+
+.balance-search-card h2 {
+  margin: 0 0 8px;
+  color: #0f172a;
+  font-size: 20px;
+}
+
+.balance-search-card > p {
+  margin: 0 0 22px;
+  color: #64748b;
+  font-size: 14px;
+}
+
+.balance-form {
+  display: flex;
+  gap: 12px;
+}
+
+.balance-form input {
+  flex: 1;
+  padding: 13px 15px;
+  border: 1px solid #cbd5e1;
+  border-radius: 8px;
+  outline: none;
+  color: #0f172a;
+  font-size: 14px;
+}
+
+.balance-form input:focus {
+  border-color: #2563eb;
+  box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.balance-form button {
+  padding: 13px 22px;
+  border: none;
+  border-radius: 8px;
+  background: #2563eb;
+  color: #ffffff;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 600;
+}
+
+.balance-form button:hover {
+  background: #1d4ed8;
+}
+
+.balance-form button:disabled {
+  cursor: not-allowed;
+  opacity: 0.65;
+}
+
+.dashboard-error {
+  margin-top: 16px;
+  padding: 12px 14px;
+  border-radius: 8px;
+  background: #fef2f2;
+  color: #dc2626;
+  font-size: 14px;
+}
+
+@media (max-width: 900px) {
+  .dashboard-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .balance-form {
+    flex-direction: column;
+  }
+}
+
+@media (max-width: 600px) {
+  .dashboard-page {
+    padding: 24px 18px;
+  }
+
+  .balance-card h2 {
+    font-size: 30px;
+  }
+}

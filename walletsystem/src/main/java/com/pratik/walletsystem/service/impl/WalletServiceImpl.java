@@ -1,5 +1,6 @@
 package com.pratik.walletsystem.service.impl;
 
+import java.math.BigDecimal;
 import java.time.LocalDateTime;
 import java.util.List;
 import java.util.stream.Collectors;
@@ -158,7 +159,21 @@ public class WalletServiceImpl implements WalletService {
 
         return "Amount transferred successfully.";
     }
+    @Override
+        public BigDecimal getBalance(String email) {
 
+            User user = userRepository.findByEmail(email)
+                    .orElseThrow(() -> new UserNotFoundException(
+                            "User not found with email: " + email
+                    ));
+
+            Wallet wallet = walletRepository.findByUser(user)
+                    .orElseThrow(() -> new WalletNotFoundException(
+                            "Wallet not found for user: " + email
+                    ));
+
+            return wallet.getBalance();
+        }
     @Override
     @Transactional(readOnly = true)
     public List<TransactionHistoryResponse> getTransactionHistory(String email) {

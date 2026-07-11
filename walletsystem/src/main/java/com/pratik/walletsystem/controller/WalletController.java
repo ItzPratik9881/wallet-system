@@ -12,6 +12,8 @@ import com.pratik.walletsystem.dto.TransactionHistoryResponse;
 
 import jakarta.validation.Valid;
 import lombok.RequiredArgsConstructor;
+
+import java.math.BigDecimal;
 import java.util.List;
 
 @RestController
@@ -53,5 +55,12 @@ public class WalletController {
             @PathVariable String email) {
 
         return ResponseEntity.ok(walletService.getTransactionHistory(email));
+    }
+
+    @GetMapping("/balance/{email}")
+    public ResponseEntity<BigDecimal> getBalance(
+            @PathVariable String email) {
+
+        return ResponseEntity.ok(walletService.getBalance(email));
     }
 }
