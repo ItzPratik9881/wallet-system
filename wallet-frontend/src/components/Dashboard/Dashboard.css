@@ -1,0 +1,820 @@
+/* ==========================================================
+                    GOOGLE FONT
+========================================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+/* ==========================================================
+                    GLOBAL
+========================================================== */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+body{
+
+    font-family:'Poppins',sans-serif;
+
+    background:#f5f7fb;
+}
+
+.dashboard-container{
+
+    min-height:100vh;
+
+    padding:35px;
+
+    background:
+    linear-gradient(135deg,#eef4ff,#f9fbff);
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+}
+
+/* ==========================================================
+                    LOADER
+========================================================== */
+
+.loader{
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    height:100vh;
+
+    font-size:30px;
+
+    font-weight:600;
+
+    color:#2563eb;
+}
+
+/* ==========================================================
+                    HEADER
+========================================================== */
+
+.dashboard-header{
+
+    background:#fff;
+
+    border-radius:22px;
+
+    padding:35px 40px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.dashboard-tag{
+
+    color:#2563eb;
+
+    font-size:13px;
+
+    font-weight:700;
+
+    letter-spacing:2px;
+
+    text-transform:uppercase;
+}
+
+.dashboard-header h1{
+
+    margin-top:12px;
+
+    font-size:38px;
+
+    color:#1e293b;
+
+    font-weight:700;
+}
+
+.dashboard-header p{
+
+    margin-top:10px;
+
+    color:#64748b;
+
+    font-size:15px;
+}
+
+.wallet-status {
+    min-width: 220px;
+    background: linear-gradient(135deg, #1d4ed8, #3b82f6);
+    color: white;
+    border-radius: 20px;
+    padding: 18px 24px;
+    display: flex;
+    align-items: center;
+    gap: 16px;
+    box-shadow: 0 12px 30px rgba(37, 99, 235, 0.28);
+    transition: all 0.35s ease;
+    border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.wallet-status:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 18px 38px rgba(37, 99, 235, 0.38);
+}
+
+.wallet-status-icon-box {
+    width: 48px;
+    height: 48px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.22);
+    backdrop-filter: blur(8px);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+}
+
+.wallet-status-icon-box .wallet-icon {
+    font-size: 22px;
+    color: #ffffff;
+    margin-bottom: 0;
+}
+
+.wallet-status-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    gap: 4px;
+    text-align: left;
+}
+
+.wallet-status-label {
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    color: rgba(255, 255, 255, 0.85);
+}
+
+.wallet-status-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+.wallet-status-badge h3 {
+    margin: 0;
+    font-size: 20px;
+    font-weight: 700;
+    letter-spacing: 0.5px;
+    color: #ffffff;
+    line-height: 1.2;
+}
+
+.status-live-dot {
+    width: 9px;
+    height: 9px;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.status-live-dot.active {
+    background-color: #4ade80;
+    box-shadow: 0 0 10px #4ade80;
+}
+
+.status-live-dot.inactive {
+    background-color: #f87171;
+    box-shadow: 0 0 10px #f87171;
+}
+
+/* ==========================================================
+                    ANALYTICS CARDS
+========================================================== */
+
+.cards-grid{
+
+    display:grid;
+
+    grid-template-columns:
+
+    repeat(4,1fr);
+
+    gap:25px;
+}
+
+.analytics-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+
+    0 10px 30px rgba(0,0,0,.08);
+
+    transition:.35s;
+
+    position:relative;
+
+    overflow:hidden;
+}
+
+.analytics-card:hover{
+
+    transform:
+
+    translateY(-8px);
+
+    box-shadow:
+
+    0 18px 45px rgba(0,0,0,.12);
+}
+
+.analytics-card::before{
+
+    content:"";
+
+    position:absolute;
+
+    left:0;
+
+    top:0;
+
+    width:100%;
+
+    height:5px;
+
+    background:#2563eb;
+}
+
+.card-icon{
+
+    width:70px;
+
+    height:70px;
+
+    border-radius:50%;
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:28px;
+
+    margin-bottom:20px;
+}
+
+.analytics-card h4{
+
+    color:#64748b;
+
+    font-weight:500;
+
+    margin-bottom:12px;
+}
+
+.analytics-card h2{
+
+    font-size:32px;
+
+    color:#1e293b;
+
+    font-weight:700;
+}
+
+/* ==========================================================
+                    MIDDLE
+========================================================== */
+
+.middle-section{
+
+    display:grid;
+
+    grid-template-columns:
+
+    1.2fr .8fr;
+
+    gap:30px;
+
+    align-items:start;
+}
+
+.right-section{
+
+    display:flex;
+
+    flex-direction:column;
+
+    gap:30px;
+}
+
+/* ==========================================================
+                    CHART
+========================================================== */
+
+.chart-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.chart-card h2{
+
+    color:#1e293b;
+
+    margin-bottom:25px;
+
+    font-size:24px;
+}
+
+.chart-wrapper{
+
+    width:350px;
+
+    height:350px;
+
+    margin:auto;
+}
+
+/* ==========================================================
+                    INFO CARD
+========================================================== */
+
+.info-card{
+
+    background:white;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:
+
+    0 10px 35px rgba(0,0,0,.08);
+
+}
+
+.info-card h2{
+
+    margin-bottom:20px;
+
+    color:#1e293b;
+}
+
+.info-row{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:16px 0;
+
+    border-bottom:1px solid #edf2f7;
+}
+
+.info-row:last-child{
+
+    border:none;
+}
+
+.info-row span{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:8px;
+
+    color:#64748b;
+
+    font-size:15px;
+}
+
+.info-row strong{
+
+    color:#1e293b;
+
+    font-weight:600;
+}
+
+/* ==========================================================
+                RECENT TRANSACTIONS
+========================================================== */
+
+.recent-card{
+
+    background:#ffffff;
+
+    border-radius:22px;
+
+    padding:30px;
+
+    box-shadow:0 10px 35px rgba(0,0,0,.08);
+
+    overflow:hidden;
+}
+
+.recent-card h2{
+
+    color:#1e293b;
+
+    margin-bottom:25px;
+
+    font-size:24px;
+
+    font-weight:700;
+}
+
+.transaction-table{
+
+    width:100%;
+
+    border-collapse:collapse;
+}
+
+.transaction-table thead{
+
+    background:linear-gradient(
+    135deg,
+    #2563eb,
+    #4f8dfd
+    );
+
+    color:white;
+}
+
+.transaction-table th{
+
+    padding:18px;
+
+    font-weight:600;
+
+    font-size:15px;
+
+    letter-spacing:.5px;
+
+    text-align:center;
+}
+
+.transaction-table td{
+
+    padding:18px;
+
+    text-align:center;
+
+    border-bottom:1px solid #edf2f7;
+
+    color:#334155;
+
+    font-size:14px;
+}
+
+.transaction-table tbody tr{
+
+    transition:.30s;
+}
+
+.transaction-table tbody tr:hover{
+
+    background:#f8fbff;
+
+    transform:scale(1.01);
+}
+
+.transaction-table tbody tr:last-child td{
+
+    border-bottom:none;
+}
+
+/* ==========================================================
+                    STATUS BADGES
+========================================================== */
+
+.status{
+
+    display:inline-flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    min-width:90px;
+
+    padding:8px 16px;
+
+    border-radius:30px;
+
+    color:white;
+
+    font-size:12px;
+
+    font-weight:700;
+
+    letter-spacing:.5px;
+}
+
+.success{
+
+    background:#22c55e;
+}
+
+.failed{
+
+    background:#ef4444;
+}
+
+.pending{
+
+    background:#f59e0b;
+}
+
+/* ==========================================================
+                    SCROLLBAR
+========================================================== */
+
+::-webkit-scrollbar{
+
+    width:8px;
+
+    height:8px;
+}
+
+::-webkit-scrollbar-track{
+
+    background:#edf2f7;
+}
+
+::-webkit-scrollbar-thumb{
+
+    background:#2563eb;
+
+    border-radius:20px;
+}
+
+::-webkit-scrollbar-thumb:hover{
+
+    background:#1d4ed8;
+}
+
+/* ==========================================================
+                    ANIMATIONS
+========================================================== */
+
+@keyframes fadeUp{
+
+    from{
+
+        opacity:0;
+
+        transform:translateY(25px);
+
+    }
+
+    to{
+
+        opacity:1;
+
+        transform:translateY(0);
+
+    }
+
+}
+
+.dashboard-header{
+
+    animation:fadeUp .6s ease;
+}
+
+.cards-grid{
+
+    animation:fadeUp .8s ease;
+}
+
+.middle-section{
+
+    animation:fadeUp 1s ease;
+}
+
+.recent-card{
+
+    animation:fadeUp 1.2s ease;
+}
+
+/* ==========================================================
+                    RESPONSIVE
+========================================================== */
+
+@media(max-width:1300px){
+
+.cards-grid{
+
+grid-template-columns:repeat(2,1fr);
+
+}
+
+.middle-section{
+
+grid-template-columns:1fr;
+
+}
+
+.chart-wrapper{
+
+width:300px;
+
+height:300px;
+
+}
+
+}
+
+@media(max-width:900px){
+
+.dashboard-header{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:25px;
+
+}
+
+.wallet-status{
+
+width:100%;
+
+}
+
+.transaction-table{
+
+display:block;
+
+overflow-x:auto;
+
+white-space:nowrap;
+
+}
+
+}
+
+@media(max-width:650px){
+
+.dashboard-container{
+
+padding:18px;
+
+gap:20px;
+
+}
+
+.cards-grid{
+
+grid-template-columns:1fr;
+
+}
+
+.dashboard-header{
+
+padding:25px;
+
+}
+
+.dashboard-header h1{
+
+font-size:28px;
+
+}
+
+.analytics-card{
+
+padding:22px;
+
+}
+
+.chart-card{
+
+padding:20px;
+
+}
+
+.info-card{
+
+padding:20px;
+
+}
+
+.recent-card{
+
+padding:20px;
+
+}
+
+.chart-wrapper{
+
+width:240px;
+
+height:240px;
+
+}
+
+.info-row{
+
+flex-direction:column;
+
+align-items:flex-start;
+
+gap:8px;
+
+}
+
+}
+
+/* ==========================================================
+                    SMALL POLISH
+========================================================== */
+
+.analytics-card,
+.chart-card,
+.info-card,
+.recent-card,
+.dashboard-header{
+
+border:1px solid rgba(226,232,240,.8);
+
+}
+
+.analytics-card:hover,
+.chart-card:hover,
+.info-card:hover,
+.recent-card:hover{
+
+transition:.35s;
+
+box-shadow:
+
+0 20px 45px rgba(37,99,235,.12);
+
+}
+
+.chart-card canvas{
+
+cursor:pointer;
+
+}
+
+.info-row strong{
+
+word-break:break-word;
+
+}
+
+.transaction-table td:first-child{
+
+font-weight:600;
+
+}
+
+.transaction-table td:nth-child(2){
+
+font-weight:700;
+
+color:#2563eb;
+
+}
+
+.dashboard-container{
+
+overflow-x:hidden;
+
+}

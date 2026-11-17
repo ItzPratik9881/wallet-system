@@ -1,0 +1,42 @@
+.summary-card{
+    flex:1;
+    min-width:180px;
+    background:white;
+    border-radius:14px;
+    padding:25px;
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+    transition:.3s;
+    border-left:6px solid #2563eb;
+}
+
+.summary-card:hover{
+    transform:translateY(-5px);
+}
+
+.summary-card h3{
+    margin:0;
+    font-size:34px;
+    font-weight:700;
+}
+
+.summary-card p{
+    margin-top:10px;
+    color:#666;
+    font-size:15px;
+}
+
+.summary-card.green{
+    border-left-color:#16a34a;
+}
+
+.summary-card.red{
+    border-left-color:#dc2626;
+}
+
+.summary-card.blue{
+    border-left-color:#2563eb;
+}
+
+.summary-card.orange{
+    border-left-color:#f59e0b;
+}

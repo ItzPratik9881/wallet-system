@@ -1,0 +1,76 @@
+.withdraw-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 40px;
+}
+
+.withdraw-card {
+  width: 450px;
+  background: #fff;
+  padding: 30px;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+.withdraw-card h2 {
+  text-align: center;
+  margin-bottom: 25px;
+}
+
+.withdraw-card form {
+  display: flex;
+  flex-direction: column;
+}
+
+.withdraw-card label {
+  margin-bottom: 6px;
+  font-weight: 600;
+}
+
+.withdraw-card input {
+  margin-bottom: 18px;
+  padding: 12px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  font-size: 15px;
+}
+
+.withdraw-card input:focus {
+  outline: none;
+  border-color: #2563eb;
+}
+
+.withdraw-card button {
+  padding: 12px;
+  background: #dc2626;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.withdraw-card button:hover {
+  background: #b91c1c;
+}
+
+.withdraw-card button:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+.success {
+  margin-top: 20px;
+  color: green;
+  text-align: center;
+  font-weight: bold;
+}
+
+.error {
+  margin-top: 20px;
+  color: red;
+  text-align: center;
+  font-weight: bold;
+}

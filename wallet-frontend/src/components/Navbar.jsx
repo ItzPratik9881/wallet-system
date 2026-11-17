@@ -1,4 +1,5 @@
 import { useLocation } from "react-router-dom";
+import { useAuth } from "../context/AuthContext";
 import "../styles/Navbar.css";
 
 const pageTitles = {
@@ -12,7 +13,13 @@ const pageTitles = {
 function Navbar() {
   const location = useLocation();
 
+  const { user } = useAuth();
+
   const title = pageTitles[location.pathname] || "Payment Ledger";
+
+  const userName = user?.fullName || "Wallet User";
+
+  const avatarLetter = userName.charAt(0).toUpperCase();
 
   return (
     <header className="navbar">
@@ -22,10 +29,12 @@ function Navbar() {
       </div>
 
       <div className="navbar-user">
-        <div className="user-avatar">U</div>
+        <div className="user-avatar">
+          {avatarLetter}
+        </div>
 
         <div>
-          <strong>Wallet User</strong>
+          <strong>{userName}</strong>
           <span>Secure Account</span>
         </div>
       </div>

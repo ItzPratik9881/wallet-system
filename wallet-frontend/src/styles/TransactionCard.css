@@ -1,0 +1,87 @@
+.transaction-card{
+
+    background:white;
+    border-radius:16px;
+    padding:25px;
+    box-shadow:0 10px 25px rgba(0,0,0,.08);
+    margin-bottom:25px;
+    transition:.3s;
+
+}
+
+.transaction-card:hover{
+
+    transform:translateY(-6px);
+
+}
+
+.transaction-top{
+
+    display:flex;
+    justify-content:space-between;
+    align-items:center;
+    margin-bottom:20px;
+
+}
+
+.transaction-top h2{
+
+    margin:0;
+
+}
+
+.transaction-top h1{
+
+    margin:0;
+    font-size:32px;
+
+}
+
+.green{
+
+    color:#16a34a;
+
+}
+
+.red{
+
+    color:#dc2626;
+
+}
+
+.blue{
+
+    color:#2563eb;
+
+}
+
+.status{
+
+    padding:6px 12px;
+    border-radius:30px;
+    background:#16a34a;
+    color:white;
+    font-size:12px;
+
+}
+
+.transaction-body{
+
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(180px,1fr));
+    gap:20px;
+
+}
+
+.transaction-body strong{
+
+    color:#777;
+
+}
+
+.transaction-body p{
+
+    margin-top:6px;
+    font-weight:600;
+
+}
