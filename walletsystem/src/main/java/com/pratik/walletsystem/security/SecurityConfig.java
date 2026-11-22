@@ -67,12 +67,18 @@ public class SecurityConfig {
     }
 
     @Bean
-    public CorsConfigurationSource corsConfigurationSource() {
+        public CorsConfigurationSource corsConfigurationSource() {
 
         CorsConfiguration configuration = new CorsConfiguration();
 
         configuration.setAllowedOriginPatterns(
-                List.of("http://localhost:5173", "http://localhost:3000", "http://127.0.0.1:*")
+                List.of(
+                        "http://localhost:5173",
+                        "http://localhost:3000",
+                        "http://127.0.0.1:*",
+                        "https://wallet-system-f6yt3s7o6-pratik-kedaris-projects.vercel.app",
+                        "https://wallet-system-xi.vercel.app"
+                )
         );
 
         configuration.setAllowedMethods(
@@ -80,7 +86,14 @@ public class SecurityConfig {
         );
 
         configuration.setAllowedHeaders(
-                List.of("Authorization", "Content-Type", "Idempotency-Key", "X-Requested-With", "Accept", "Origin")
+                List.of(
+                        "Authorization",
+                        "Content-Type",
+                        "Idempotency-Key",
+                        "X-Requested-With",
+                        "Accept",
+                        "Origin"
+                )
         );
 
         configuration.setExposedHeaders(
@@ -92,13 +105,10 @@ public class SecurityConfig {
         UrlBasedCorsConfigurationSource source =
                 new UrlBasedCorsConfigurationSource();
 
-        source.registerCorsConfiguration(
-                "/**",
-                configuration
-        );
+        source.registerCorsConfiguration("/**", configuration);
 
         return source;
-    }
+        }
 
     @Bean
     public AuthenticationProvider authenticationProvider() {
