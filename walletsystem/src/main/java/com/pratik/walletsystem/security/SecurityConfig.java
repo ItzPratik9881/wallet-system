@@ -76,6 +76,7 @@ public class SecurityConfig {
                         "http://localhost:5173",
                         "http://localhost:3000",
                         "http://127.0.0.1:*",
+                        "https://wallet-system-lpc1d1645-pratik-kedaris-projects.vercel.app",
                         "https://wallet-system-f6yt3s7o6-pratik-kedaris-projects.vercel.app",
                         "https://wallet-system-xi.vercel.app"
                 )
